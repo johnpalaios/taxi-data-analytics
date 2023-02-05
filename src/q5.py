@@ -28,6 +28,9 @@ def FifthQuery() :
         resultDf = taxiTripsDf.filter(taxiTripsDf.rank <= 5).orderBy([taxiTripsDf.day, taxiTripsDf.rank])
 
         resultDf.show()
+
+        resultDf.write.option("header", True).csv(
+        "results/fifth-query")
         endTime = time.time()
         return endTime - startTime
         

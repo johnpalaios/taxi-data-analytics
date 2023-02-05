@@ -30,6 +30,9 @@ def FourthQuery() :
         
         resultDf.show()
 
+        resultDf.write.option("header", True).csv(
+        "results/fourth-query")
+        
         endTime = time.time()
         return endTime - startTime
         

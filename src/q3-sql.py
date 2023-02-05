@@ -28,6 +28,9 @@ def ThirdQueryDF() :
                         .orderBy(col("15DayTimePeriod"))\
                         .show()
         
+        taxiTripsDf15.write.option("header", True).csv(
+        "results/third-query-sql")
+
         finalTime = time.time()
         return finalTime - initialTime
 

@@ -31,6 +31,8 @@ def ThirdQueryRDD() :
         for i in result :
                print(i)
 
+        result.write.option("header", True).csv(
+        "hdfs://master:9000/results/second-query-rdd")
         finalTime = time.time()
         return finalTime - initialTime
 
