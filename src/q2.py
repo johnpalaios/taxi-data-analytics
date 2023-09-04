@@ -9,11 +9,11 @@ from pyspark.sql.functions import *
 import datetime as dt
 import time
 
-def secondQuery() :
+def second_query() :
         spark = SparkSession\
         .builder\
         .master("spark://192.168.0.1:7077") \
-        .appName("query2") \
+        .appName("second_query") \
         .config("spark.driver.memory", "4g") \
         .getOrCreate()
 
@@ -44,22 +44,4 @@ def secondQuery() :
 
 if __name__ == "__main__": 
         print("Going to execute the Second Query...")
-        print("This is the time for the Second Query : " + str(secondQuery()))
-
-
-
-
-
-
-# taxiTripsDfMonth.createOrReplaceTempView("taxi_trips")
-
-# sqlQuery = """
-#         SELECT pickup_month, MAX(taxi_trips.Tolls_amount)
-#         FROM taxi_trips
-#         GROUP BY pickup_month 
-#         ORDER BY pickup_month ASC
-# """
-
-# result = spark.sql(sqlQuery)
-
-# result.show()
+        print("This is the time for the Second Query : " + str(second_query()))

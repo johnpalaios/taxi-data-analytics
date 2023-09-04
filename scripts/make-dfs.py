@@ -5,7 +5,7 @@ from pyspark.sql.functions import year, month, dayofmonth
 
 spark = SparkSession\
         .builder\
-        .appName("Make-Dataframes-And-Rdds")\
+        .appName("make_dfs_and_rdds")\
         .getOrCreate()
 
 tripData = []

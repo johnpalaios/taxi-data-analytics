@@ -3,12 +3,12 @@ import datetime, sys
 from pyspark.sql.functions import *
 import time
 
-def ThirdQueryRDD() : 
+def third_query_rdd() : 
         spark = SparkSession\
         .builder\
         .master("local[1]") \
-        .appName("q3-rdd") \
-        .config("spark.driver.memory", "8g") \
+        .appName("third_query_rdd") \
+        .config("spark.driver.memory", "4g") \
         .getOrCreate()
         
         initialTime = time.time()
@@ -39,4 +39,4 @@ def ThirdQueryRDD() :
 
 if __name__ == "__main__": 
         print("Going to execute the Third Query In RDD API...")
-        print("This is the time for the Third Query In RDD API : " + str(ThirdQueryRDD()))
+        print("This is the time for the Third Query In RDD API : " + str(third_query_rdd()))

@@ -5,7 +5,7 @@ from pyspark.sql.types import StructType,StructField, StringType, IntegerType
 
 spark = SparkSession.builder\
     .master("local[1]")\
-    .appName("CsvToParquet")\
+    .appName("csv_to_parquet")\
     .getOrCreate()
     
 

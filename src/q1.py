@@ -4,13 +4,11 @@ from pyspark.sql.functions import *
 import datetime as dt
 import time
 
-
-
-def firstQuery() :
+def first_query() :
         spark = SparkSession\
                 .builder\
                 .master("spark://192.168.0.1:7077") \
-                .appName("query1") \
+                .appName("first_query") \
                 .config("spark.driver.memory", "4g") \
                 .getOrCreate()
 
@@ -39,21 +37,4 @@ def firstQuery() :
 
 if __name__ == "__main__": 
         print("Going to execute the First Query...")
-        print("This is the time for the firstQuery : " + str(firstQuery()))
-
-
-
-
-# taxiTripsDfMonth = taxiTripsDf.withColumn('pickup_month',month(taxiTripsDf.tpep_pickup_datetime))
-
-# zoneLookupsDf.createOrReplaceTempView("zone_lookups")
-# taxiTripsDfMonth.createOrReplaceTempView("taxi_trips")
-
-# sqlQuery = """
-#         SELECT MAX(Tip_amount)
-#         FROM zone_lookups
-#         INNER JOIN taxi_trips
-#         ON zone_lookups.LocationID = taxi_trips.DOLocationID
-#         WHERE zone_lookups.Zone='Battery Park'
-#         AND taxi_trips.pickup_month=3;
-#     """
+        print("This is the time for the firstQuery : " + str(first_query()))

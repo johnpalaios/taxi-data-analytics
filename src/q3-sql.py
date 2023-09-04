@@ -3,11 +3,11 @@ import datetime, sys
 from pyspark.sql.functions import *
 import time
 
-def ThirdQueryDF() : 
+def third_query_df() : 
         spark = SparkSession\
         .builder\
         .master("spark://192.168.0.1:7077") \
-        .appName("q3-sql") \
+        .appName("third_query_df") \
         .config("spark.driver.memory", "4g") \
         .getOrCreate()
         
@@ -37,4 +37,4 @@ def ThirdQueryDF() :
 
 if __name__ == "__main__": 
         print("Going to execute the Third Query In Dataframe/SQL API...")
-        print("This is the time for the Third Query In Dataframe/SQL API : " + str(ThirdQueryDF()))
+        print("This is the time for the Third Query In Dataframe/SQL API : " + str(third_query_df()))

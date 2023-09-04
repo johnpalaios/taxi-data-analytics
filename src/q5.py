@@ -3,10 +3,11 @@ from pyspark.sql.window import Window
 from pyspark.sql.functions import *
 import time
 
-def FifthQuery() :
+def fifth_query() :
         spark = SparkSession.builder.master("spark://192.168.0.1:7077")\
                 .config("spark.executor.memory", "4g")\
-                .appName("fifth-query").getOrCreate()
+                .appName("fifth_query")\
+                .getOrCreate()
 
         startTime = time.time()
 
@@ -36,4 +37,4 @@ def FifthQuery() :
         
 if __name__ == "__main__": 
         print("Going to execute the Fifth Query In Dataframe/SQL API...")
-        print("This is the time for the Fifth Query : " + str(FifthQuery()))
+        print("This is the time for the Fifth Query : " + str(fifth_query()))

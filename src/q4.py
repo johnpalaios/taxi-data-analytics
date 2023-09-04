@@ -4,10 +4,10 @@ from pyspark.sql.functions import *
 import time
 
 
-def FourthQuery() :
+def fourth_query() :
         spark = SparkSession.builder.master("spark://192.168.0.1:7077")\
                 .config("spark.executor.memory", "4g")\
-                .appName("fourth-query").getOrCreate()
+                .appName("fourth_query").getOrCreate()
 
         startTime = time.time()
 
@@ -38,4 +38,4 @@ def FourthQuery() :
         
 if __name__ == "__main__": 
         print("Going to execute the Fourth Query In Dataframe/SQL API...")
-        print("This is the time for the Fourth Query : " + str(FourthQuery()))
+        print("This is the time for the Fourth Query : " + str(fourth_query()))
