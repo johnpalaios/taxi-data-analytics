@@ -1,4 +1,4 @@
-# Big Data Analytics using Apache Spark
+# Taxi Data Analytics using Apache Spark
 In this project, I used Apache Spark over a [Hadoop Distributed File System (HDFS)](https://hadoop.apache.org/docs/r1.2.1/hdfs_design.html) across 3 nodes in order to query [New York City taxi trip data](https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page) of the months between Janury 2022 and June 2022.
 In order to access the Spark API, I used [PySpark](https://spark.apache.org/docs/latest/api/python/index.html), the Python API for Apache Spark using both the [Dataframe/SQL API](https://spark.apache.org/docs/latest/sql-programming-guide.html#dataframes) and the [RDD API](https://spark.apache.org/docs/latest/rdd-programming-guide.html).
 
